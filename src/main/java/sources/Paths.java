@@ -10,7 +10,7 @@ package sources;
  * @author adamlass
  */
 public class Paths {
-    private static final String URL = "adamlass.com";
+    private static final String URL = "https://adamlass.com/LarsRoyalityBrand";
     public static final String URL_PICS = URL + "/pics";
     public static final String URI_CARS = URL + "/api/cars";
 }

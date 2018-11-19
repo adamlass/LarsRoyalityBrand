@@ -24,7 +24,7 @@ public class GenerateCars {
     //pair
     private static String[] models = {"Eurasian lynx", "Cougar", "Cheetah", "Ocelot"};
     private static int[] seatSizes = {8, 5, 4, 2};
-    private static String[] ecoRatings = {"B", "C", "A", "A+"};
+    public static String[] ecoRatings = {"B", "C", "A", "A+"};
     private static String[] energyTypes = {"Diesel", "Diesel", "Hybrid", "Electric"};
     private static double[] weights = {2303, 2132, 1950, 1500};
     private static double[] heights = {1.7, 1.63, 1.61, 1.46};
@@ -38,8 +38,6 @@ public class GenerateCars {
     //pair
     private static String[] letherTypes = {"Premium Full Grain", "Full Grain", "Genuine Leather"};
 
-    private static String URL = "adamlass.com/LarsRoyalityBrand/pics/";
-    
     private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("pu");
     
     public static void main(String[] args) {
@@ -49,9 +47,9 @@ public class GenerateCars {
                 for (int k = 0; k < letherTypes.length; k++) {
                     String model = models[i];
                     String color = colors[j];
-                    String imageURL = URL + fileNames[j];
+                    String imageURL = fileNames[j];
                     int seats = seatSizes[i];
-                    double price = rnd.nextInt(25) + 5 * 100000;
+                    double price = (rnd.nextInt(25) + 5) * 100000;
 
                     String ecoRating = ecoRatings[i];
                     String energyType = energyTypes[i];
